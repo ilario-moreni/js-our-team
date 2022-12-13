@@ -47,20 +47,24 @@ let container = document.getElementById('my-container');
 
 function generateKey(container, objectArray){
     for (let i=0; i<objectArray.length; i++){
+        let card = document.createElement('div');
+        card.id = `card_${i}`;
+        card.classList.add('card')
         for (let key in objectArray[i]){
             /* bonus 1 */
             if(key == 'image'){
                 let myImg = document.createElement('img');
                 myImg.src = `./img/${objectArray[i][key]}`;
                 console.log(myImg);
-                container.appendChild(myImg);
+                card.appendChild(myImg);
             } else {
                 let myDiv = document.createElement('div');
                 myDiv.innerHTML = objectArray[i][key];
                 console.log(myDiv);
-                container.appendChild(myDiv);
+                card.appendChild(myDiv);
             }
         }
+        container.appendChild(card);
     }
 }
 
