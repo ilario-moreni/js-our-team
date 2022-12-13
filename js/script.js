@@ -40,3 +40,21 @@ for (let i=0; i<teamArray.length; i++){
         console.log(key+" = "+teamArray[i][key])
     }
 }
+
+/* milestone 2 */
+
+let container = document.getElementById('my-container');
+
+function generateKey(container, objectArray){
+    for (let i=0; i<objectArray.length; i++){
+        for (let key in objectArray[i]){
+            let myDiv = document.createElement('div');
+            myDiv.innerHTML = objectArray[i][key];
+            console.log(myDiv);
+            container.appendChild(myDiv);
+        }
+    }
+}
+
+generateKey(container, teamArray);
+
