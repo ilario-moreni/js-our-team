@@ -1,3 +1,4 @@
+/* milestone 0 */
 let teamArray = [
     {
         name: 'Wayne Barnett',
@@ -29,4 +30,13 @@ let teamArray = [
         role: 'Graphic Designer',
         image: 'barbara-ramos-graphic-designer.jpg'
     }
-]
+];
+
+
+/* milestone 1 */
+
+for (let i=0; i<teamArray.length; i++){
+    for (let key in teamArray[i]){
+        console.log(key+" = "+teamArray[i][key])
+    }
+}
